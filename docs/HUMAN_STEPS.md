@@ -1,6 +1,6 @@
 # Human steps
 
-Only Shreyas can do these. Do them in order. The release commit is `RELEASE_SHA` on branch `claude/build-agents-md-census`.
+Only Shreyas can do these. Do them in order. The release commit is `bc546808a5df57dbf699c5ba4e504da9e7cb2649` on branch `claude/build-agents-md-census`.
 
 1. **Create the GitHub repo and push the work.** The build ran with a local stand-in for GitHub.
    - Create the private repo `shreyas-tech7/agents-md-census` on https://github.com/new (no README, no license).
@@ -17,7 +17,7 @@ Only Shreyas can do these. Do them in order. The release commit is `RELEASE_SHA`
 4. **Tag the release candidate.**
    ```bash
    git fetch origin
-   git tag -a v0.1.0-rc1 RELEASE_SHA -m "Release candidate 1"
+   git tag -a v0.1.0-rc1 bc546808a5df57dbf699c5ba4e504da9e7cb2649 -m "Release candidate 1"
    git push origin v0.1.0-rc1
    ```
    Or create a pre-release with that tag on GitHub.

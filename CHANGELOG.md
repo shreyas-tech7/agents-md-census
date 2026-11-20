@@ -12,4 +12,4 @@ First release candidate.
 - `census self-check`: drift check on this repo's own AGENTS.md and CLAUDE.md.
 - Session dataset in `data/`, manual `pilot` and `full-run` workflows.
 
-Release commit: see `docs/HUMAN_STEPS.md`.
+Release commit: `bc546808a5df57dbf699c5ba4e504da9e7cb2649` on branch `claude/build-agents-md-census`. The tag waits for step 4 in `docs/HUMAN_STEPS.md`.
