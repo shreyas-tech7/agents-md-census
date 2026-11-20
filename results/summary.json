@@ -1,0 +1,360 @@
+{
+  "any_file_by": {
+    "language": [
+      {
+        "ci_high": 16.8,
+        "ci_low": 3.8,
+        "date": "2026-11-20",
+        "k": 6,
+        "label": "language=C++",
+        "method": "Wilson score 95%",
+        "n": 73,
+        "pct": 8.2,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 15.4,
+        "ci_low": 3.0,
+        "date": "2026-11-20",
+        "k": 5,
+        "label": "language=Go",
+        "method": "Wilson score 95%",
+        "n": 71,
+        "pct": 7.0,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 15.4,
+        "ci_low": 3.0,
+        "date": "2026-11-20",
+        "k": 5,
+        "label": "language=Java",
+        "method": "Wilson score 95%",
+        "n": 71,
+        "pct": 7.0,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 16.2,
+        "ci_low": 2.7,
+        "date": "2026-11-20",
+        "k": 4,
+        "label": "language=JavaScript",
+        "method": "Wilson score 95%",
+        "n": 59,
+        "pct": 6.8,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 25.2,
+        "ci_low": 6.0,
+        "date": "2026-11-20",
+        "k": 6,
+        "label": "language=Python",
+        "method": "Wilson score 95%",
+        "n": 47,
+        "pct": 12.8,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 15.7,
+        "ci_low": 3.1,
+        "date": "2026-11-20",
+        "k": 5,
+        "label": "language=Ruby",
+        "method": "Wilson score 95%",
+        "n": 70,
+        "pct": 7.1,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 15.9,
+        "ci_low": 2.6,
+        "date": "2026-11-20",
+        "k": 4,
+        "label": "language=Rust",
+        "method": "Wilson score 95%",
+        "n": 60,
+        "pct": 6.7,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 28.4,
+        "ci_low": 10.4,
+        "date": "2026-11-20",
+        "k": 12,
+        "label": "language=TypeScript",
+        "method": "Wilson score 95%",
+        "n": 68,
+        "pct": 17.6,
+        "unit": "repos"
+      }
+    ],
+    "push_year": [
+      {
+        "ci_high": 2.2,
+        "ci_low": 0.0,
+        "date": "2026-11-20",
+        "k": 0,
+        "label": "push_year=2024",
+        "method": "Wilson score 95%",
+        "n": 174,
+        "pct": 0.0,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 3.1,
+        "ci_low": 0.1,
+        "date": "2026-11-20",
+        "k": 1,
+        "label": "push_year=2025",
+        "method": "Wilson score 95%",
+        "n": 181,
+        "pct": 0.6,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 35.4,
+        "ci_low": 21.7,
+        "date": "2026-11-20",
+        "k": 46,
+        "label": "push_year=2026",
+        "method": "Wilson score 95%",
+        "n": 164,
+        "pct": 28.0,
+        "unit": "repos"
+      }
+    ],
+    "star_band": [
+      {
+        "ci_high": 10.5,
+        "ci_low": 3.2,
+        "date": "2026-11-20",
+        "k": 10,
+        "label": "star_band=10..99",
+        "method": "Wilson score 95%",
+        "n": 169,
+        "pct": 5.9,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 11.7,
+        "ci_low": 4.0,
+        "date": "2026-11-20",
+        "k": 12,
+        "label": "star_band=100..999",
+        "method": "Wilson score 95%",
+        "n": 174,
+        "pct": 6.9,
+        "unit": "repos"
+      },
+      {
+        "ci_high": 20.1,
+        "ci_low": 9.8,
+        "date": "2026-11-20",
+        "k": 25,
+        "label": "star_band=>=1000",
+        "method": "Wilson score 95%",
+        "n": 176,
+        "pct": 14.2,
+        "unit": "repos"
+      }
+    ]
+  },
+  "collection_dates": [
+    "2026-11-20",
+    "2026-11-20"
+  ],
+  "cost": {
+    "dollars": 0,
+    "model_calls": 0,
+    "raw_requests": 3945,
+    "raw_requests_per_repo": 7.6,
+    "search_requests": 144
+  },
+  "headline": [
+    {
+      "ci_high": 11.8,
+      "ci_low": 6.9,
+      "date": "2026-11-20",
+      "k": 47,
+      "label": "Repos with at least one agent instruction file",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 9.1,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 8.8,
+      "ci_low": 4.6,
+      "date": "2026-11-20",
+      "k": 33,
+      "label": "Repos with AGENTS.md",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 6.4,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 7.9,
+      "ci_low": 3.9,
+      "date": "2026-11-20",
+      "k": 29,
+      "label": "Repos with CLAUDE.md",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 5.6,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 2.2,
+      "ci_low": 0.4,
+      "date": "2026-11-20",
+      "k": 5,
+      "label": "Repos with .github/copilot-instructions.md",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 1.0,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 1.1,
+      "ci_low": 0.0,
+      "date": "2026-11-20",
+      "k": 1,
+      "label": "Repos with GEMINI.md",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 0.2,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 0.7,
+      "ci_low": 0.0,
+      "date": "2026-11-20",
+      "k": 0,
+      "label": "Repos with SKILL.md",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 0.0,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 1.1,
+      "ci_low": 0.0,
+      "date": "2026-11-20",
+      "k": 1,
+      "label": "Repos with .cursorrules",
+      "method": "Wilson score 95%",
+      "n": 519,
+      "pct": 0.2,
+      "unit": "repos"
+    },
+    {
+      "ci_high": 52.6,
+      "ci_low": 25.8,
+      "date": "2026-11-20",
+      "k": 18,
+      "label": "Repos with a file that use two or more formats",
+      "method": "Wilson score 95%",
+      "n": 47,
+      "pct": 38.3,
+      "unit": "repos with a file"
+    },
+    {
+      "ci_high": 37.5,
+      "ci_low": 17.2,
+      "date": "2026-11-20",
+      "k": 18,
+      "label": "Files that only point to another instruction file",
+      "method": "Wilson score 95%",
+      "n": 69,
+      "pct": 26.1,
+      "unit": "files"
+    },
+    {
+      "ci_high": 76.4,
+      "ci_low": 51.0,
+      "date": "2026-11-20",
+      "k": 33,
+      "label": "Files with a commands section",
+      "method": "Wilson score 95%",
+      "n": 51,
+      "pct": 64.7,
+      "unit": "non-pointer files"
+    },
+    {
+      "ci_high": 62.3,
+      "ci_low": 35.9,
+      "date": "2026-11-20",
+      "k": 25,
+      "label": "Files with a testing section",
+      "method": "Wilson score 95%",
+      "n": 51,
+      "pct": 49.0,
+      "unit": "non-pointer files"
+    },
+    {
+      "ci_high": 73.0,
+      "ci_low": 47.1,
+      "date": "2026-11-20",
+      "k": 31,
+      "label": "Files with a style section",
+      "method": "Wilson score 95%",
+      "n": 51,
+      "pct": 60.8,
+      "unit": "non-pointer files"
+    },
+    {
+      "ci_high": 65.9,
+      "ci_low": 39.5,
+      "date": "2026-11-20",
+      "k": 27,
+      "label": "Files with an architecture section",
+      "method": "Wilson score 95%",
+      "n": 51,
+      "pct": 52.9,
+      "unit": "non-pointer files"
+    },
+    {
+      "ci_high": 49.0,
+      "ci_low": 23.6,
+      "date": "2026-11-20",
+      "k": 18,
+      "label": "Files with a boundaries section",
+      "method": "Wilson score 95%",
+      "n": 51,
+      "pct": 35.3,
+      "unit": "non-pointer files"
+    },
+    {
+      "ci_high": 27.0,
+      "ci_low": 1.0,
+      "date": "2026-11-20",
+      "k": 1,
+      "label": "Files with at least one drifted command",
+      "method": "Wilson score 95%",
+      "n": 17,
+      "pct": 5.9,
+      "unit": "files with a checkable command"
+    },
+    {
+      "ci_high": 11.7,
+      "ci_low": 2.9,
+      "date": "2026-11-20",
+      "k": 7,
+      "label": "Checkable commands that drift",
+      "method": "Wilson score 95%",
+      "n": 118,
+      "pct": 5.9,
+      "unit": "checkable commands"
+    }
+  ],
+  "median_lines": 77,
+  "n_commands_checkable": 118,
+  "n_commands_found": 148,
+  "n_files": 69,
+  "n_non_pointer_files": 51,
+  "n_repos": 519,
+  "n_sampled": 1065
+}
