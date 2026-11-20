@@ -7,6 +7,7 @@ URL, so no repo path ever appears in a file name.
 from __future__ import annotations
 
 import hashlib
+import http.client
 import json
 import os
 import time
@@ -152,7 +153,7 @@ class Fetcher:
             self._pace()
             try:
                 status, body, raw_headers = self._open(url)
-            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            except (OSError, http.client.HTTPException) as e:  # URLError is an OSError
                 attempt += 1
                 if attempt > self.max_retries:
                     return Response(url, 0, f"network error: {e}", {}, self.today())
@@ -197,8 +198,10 @@ class Fetcher:
         return "rate limit" in body.lower()
 
     def _backoff(self, attempt: int, headers: dict) -> float:
-        if "retry-after" in headers:
+        try:
             return float(headers["retry-after"])
+        except (KeyError, ValueError):  # missing, or an HTTP date instead of seconds
+            pass
         reset = headers.get("x-ratelimit-reset")
         if reset is not None and self._exhausted(headers):
             return max(float(reset) - self.clock(), 0) + 1

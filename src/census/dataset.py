@@ -101,6 +101,7 @@ def build(cache: Path, data: Path, results: Path, raw: str = RAW) -> dict:
     sample = read_sample(data)
     state = StateLog(cache / "collect_state.jsonl").state
     repos, files, dates = [], [], []
+    n_requests = 0
     for s in sample:
         if state.get(s["repo"]) != "done":
             continue
@@ -116,11 +117,20 @@ def build(cache: Path, data: Path, results: Path, raw: str = RAW) -> dict:
         )
         files.extend(frows)
         dates.extend(d)
+        n_requests += len(d)
     repos.sort(key=lambda r: r["repo"].lower())
     files.sort(key=lambda r: (r["repo"].lower(), r["file"]))
     _write(repos, REPO_FIELDS, data / "census_repos")
     _write(files, FILE_FIELDS, data / "census_files")
     summary = summarize(repos, files, len(sample), sorted(set(dates)))
+    queries = json.loads((data / "queries.json").read_text())["queries"]
+    summary["cost"] = {
+        "search_requests": 2 * len([q for q in queries if q.get("status") == 200]),
+        "raw_requests": n_requests,
+        "raw_requests_per_repo": round(n_requests / len(repos), 2) if repos else None,
+        "model_calls": 0,
+        "dollars": 0,
+    }
     results.mkdir(parents=True, exist_ok=True)
     (results / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     return summary

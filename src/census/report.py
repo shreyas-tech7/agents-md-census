@@ -42,6 +42,16 @@ def readme_table(summary: dict, ev: dict | None) -> str:
         lines.append(f"| {p['label']} | {_fmt(p)} | {p['k']} / {p['n']} | {p['unit']} |")
     for name, p in _eval_rows(ev):
         lines.append(f"| {name} | {_fmt(p)} | {p['k']} / {p['n']} | {p['unit']} |")
+    cost = summary.get("cost")
+    if cost:
+        lines += [
+            "",
+            (
+                f"Cost of this run: {cost['search_requests']} Search API requests, "
+                f"{cost['raw_requests']} raw file requests ({cost['raw_requests_per_repo']} per repo), "
+                f"{cost['model_calls']} model calls, ${cost['dollars']}. These are fixed counts."
+            ),
+        ]
     return "\n".join(lines)
 
 

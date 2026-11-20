@@ -1,3 +1,4 @@
+import http.client
 import socket
 import urllib.error
 import urllib.request
@@ -117,3 +118,25 @@ def test_placeholder_token_is_ignored(monkeypatch):
     assert real_token() is None
     monkeypatch.setenv("GITHUB_TOKEN", "ghp_fake_for_test")
     assert real_token() == "ghp_fake_for_test"
+
+
+def test_network_error_returns_status_0_after_retries(tmp_path):
+    """Broken case: a transfer cut mid-body (IncompleteRead) crashed the whole run."""
+    f, clock = make(tmp_path, max_retries=2, base_backoff=1)
+
+    def cut(url):
+        raise http.client.IncompleteRead(b"partial")
+
+    f._open = cut
+    r = f.get("https://raw.example.invalid/x")
+    assert r.status == 0 and clock.sleeps == [1, 2]
+    assert f.cached("https://raw.example.invalid/x") is None
+
+
+def test_retry_after_as_http_date_does_not_crash(server, tmp_path):
+    server.routes["/d"] = [
+        (429, {"Retry-After": "Wed, 21 Oct 2026 07:28:00 GMT"}, ""),
+        (200, {}, "ok"),
+    ]
+    f, clock = make(tmp_path, base_backoff=7)
+    assert f.get(server.url + "/d").body == "ok" and clock.sleeps == [7]
