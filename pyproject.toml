@@ -1,0 +1,35 @@
+[project]
+name = "agents-md-census"
+version = "0.1.0rc1"
+description = "A census of how public repos write instructions for AI coding agents, and how often those instructions drift from the real commands."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+census = "census.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "C4", "ISC", "S", "RUF"]
+ignore = ["E501"]  # ruff format owns line length
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S310"]
