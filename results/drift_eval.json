@@ -1,0 +1,364 @@
+{
+  "date": "2026-11-20",
+  "fn": 1,
+  "fp": 0,
+  "heldout": {
+    "fn": 3,
+    "fp": 0,
+    "n_snippets": 12,
+    "per_snippet": [
+      {
+        "expected": [
+          "npm lint"
+        ],
+        "id": "H01",
+        "predicted": []
+      },
+      {
+        "expected": [],
+        "id": "H02",
+        "predicted": []
+      },
+      {
+        "expected": [
+          "npm gen"
+        ],
+        "id": "H03",
+        "predicted": []
+      },
+      {
+        "expected": [
+          "make lint"
+        ],
+        "id": "H04",
+        "predicted": [
+          "make lint"
+        ]
+      },
+      {
+        "expected": [
+          "npm build",
+          "npm test"
+        ],
+        "id": "H05",
+        "predicted": [
+          "npm build",
+          "npm test"
+        ]
+      },
+      {
+        "expected": [
+          "pnpm lint:css"
+        ],
+        "id": "H06",
+        "predicted": [
+          "pnpm lint:css"
+        ]
+      },
+      {
+        "expected": [],
+        "id": "H07",
+        "predicted": []
+      },
+      {
+        "expected": [
+          "make help"
+        ],
+        "id": "H08",
+        "predicted": [
+          "make help"
+        ]
+      },
+      {
+        "expected": [
+          "npm typecheck"
+        ],
+        "id": "H09",
+        "predicted": [
+          "npm typecheck"
+        ]
+      },
+      {
+        "expected": [
+          "make docs"
+        ],
+        "id": "H10",
+        "predicted": []
+      },
+      {
+        "expected": [
+          "poe typecheck"
+        ],
+        "id": "H11",
+        "predicted": [
+          "poe typecheck"
+        ]
+      },
+      {
+        "expected": [
+          "npm e2e"
+        ],
+        "id": "H12",
+        "predicted": [
+          "npm e2e"
+        ]
+      }
+    ],
+    "precision": {
+      "ci_high": 100.0,
+      "ci_low": 67.6,
+      "date": "2026-11-20",
+      "k": 8,
+      "label": "precision",
+      "method": "Wilson score 95%",
+      "n": 8,
+      "pct": 100.0,
+      "unit": "predicted drift"
+    },
+    "recall": {
+      "ci_high": 90.3,
+      "ci_low": 43.4,
+      "date": "2026-11-20",
+      "k": 8,
+      "label": "recall",
+      "method": "Wilson score 95%",
+      "n": 11,
+      "pct": 72.7,
+      "unit": "labeled drift"
+    },
+    "tp": 8
+  },
+  "label_agreement": {
+    "ci_high": 99.4,
+    "ci_low": 83.3,
+    "date": "2026-11-20",
+    "k": 29,
+    "label": "snippets where both labelers agree",
+    "method": "Wilson score 95%",
+    "n": 30,
+    "pct": 96.7,
+    "unit": "snippets"
+  },
+  "n_snippets": 30,
+  "per_snippet": [
+    {
+      "expected": [],
+      "id": "S01",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "npm typecheck"
+      ],
+      "id": "S02",
+      "predicted": [
+        "npm typecheck"
+      ]
+    },
+    {
+      "expected": [
+        "npm test"
+      ],
+      "id": "S03",
+      "predicted": [
+        "npm test"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S04",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "make lint"
+      ],
+      "id": "S05",
+      "predicted": [
+        "make lint"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S06",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S07",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S08",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "pnpm check"
+      ],
+      "id": "S09",
+      "predicted": [
+        "pnpm check"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S10",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S11",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "make docs"
+      ],
+      "id": "S12",
+      "predicted": [
+        "make docs"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S13",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "poe format"
+      ],
+      "id": "S14",
+      "predicted": [
+        "poe format"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S15",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S16",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "npm test:e2e"
+      ],
+      "id": "S17",
+      "predicted": [
+        "npm test:e2e"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S18",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S19",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "make release"
+      ],
+      "id": "S20",
+      "predicted": [
+        "make release"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S21",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S22",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S23",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "make bench"
+      ],
+      "id": "S24",
+      "predicted": [
+        "make bench"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S25",
+      "predicted": []
+    },
+    {
+      "expected": [],
+      "id": "S26",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "npm start:prod"
+      ],
+      "id": "S27",
+      "predicted": [
+        "npm start:prod"
+      ]
+    },
+    {
+      "expected": [],
+      "id": "S28",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "make fmt"
+      ],
+      "id": "S29",
+      "predicted": []
+    },
+    {
+      "expected": [
+        "npm prepare-db"
+      ],
+      "id": "S30",
+      "predicted": [
+        "npm prepare-db"
+      ]
+    }
+  ],
+  "precision": {
+    "ci_high": 100.0,
+    "ci_low": 74.1,
+    "date": "2026-11-20",
+    "k": 11,
+    "label": "precision",
+    "method": "Wilson score 95%",
+    "n": 11,
+    "pct": 100.0,
+    "unit": "predicted drift"
+  },
+  "recall": {
+    "ci_high": 98.5,
+    "ci_low": 64.6,
+    "date": "2026-11-20",
+    "k": 11,
+    "label": "recall",
+    "method": "Wilson score 95%",
+    "n": 12,
+    "pct": 91.7,
+    "unit": "labeled drift"
+  },
+  "tp": 11
+}

@@ -1,0 +1,5 @@
+{"total_count": 3, "incomplete_results": false, "items": [
+  {"full_name": "fixture-org/alpha", "default_branch": "main", "stargazers_count": 120, "owner": {"login": "fixture-org"}},
+  {"full_name": "fixture-org/beta", "default_branch": "master", "stargazers_count": 140, "owner": {"login": "fixture-org"}},
+  {"full_name": "fixture-org/gamma", "default_branch": "main", "stargazers_count": 300, "owner": {"login": "fixture-org"}}
+]}

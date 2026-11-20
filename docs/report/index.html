@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agents-md-census report</title>
+<style>
+:root { --fg:#1b1f24; --muted:#57606a; --bg:#ffffff; --bar:#2f6feb; --line:#d0d7de; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --muted:#9198a1; --bg:#0d1117; --bar:#4493f8; --line:#30363d; } }
+body { font: 16px/1.5 system-ui, sans-serif; color: var(--fg); background: var(--bg); max-width: 980px; margin: 0 auto; padding: 16px; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0 24px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bar { background: var(--line); height: 10px; width: 160px; border-radius: 5px; overflow: hidden; }
+.bar span { display: block; height: 100%; background: var(--bar); }
+p.meta { color: var(--muted); }
+@media (max-width: 640px) { .bar { width: 60px; } th, td { padding: 4px; font-size: 14px; } }
+</style></head><body>
+<h1>agents-md-census report</h1>
+<p class=meta>1065 public repos collected on 2026-11-20, out of
+1065 sampled across language, star band and last push year.
+129 instruction files found. Every percentage has a 95% Wilson score interval.
+This page shows totals only and never names a single repo.
+See METHODOLOGY.md and LIMITATIONS.md in the repo for how the numbers were made.</p>
+<h2>Headline numbers</h2><table><tr><th>Measure</th><th>Result (95% CI)</th><th>k / n</th><th></th></tr><tr><td>Repos with at least one agent instruction file</td><td class=num>8.5% (6.9 to 10.3)</td><td class=num>90 / 1065</td><td><div class=bar><span style='width:8.5%'></span></div></td></tr>
+<tr><td>Repos with AGENTS.md</td><td class=num>6.0% (4.7 to 7.6)</td><td class=num>64 / 1065</td><td><div class=bar><span style='width:6.0%'></span></div></td></tr>
+<tr><td>Repos with CLAUDE.md</td><td class=num>4.9% (3.7 to 6.3)</td><td class=num>52 / 1065</td><td><div class=bar><span style='width:4.9%'></span></div></td></tr>
+<tr><td>Repos with .github/copilot-instructions.md</td><td class=num>0.9% (0.5 to 1.7)</td><td class=num>10 / 1065</td><td><div class=bar><span style='width:0.9%'></span></div></td></tr>
+<tr><td>Repos with GEMINI.md</td><td class=num>0.2% (0.1 to 0.7)</td><td class=num>2 / 1065</td><td><div class=bar><span style='width:0.2%'></span></div></td></tr>
+<tr><td>Repos with SKILL.md</td><td class=num>0.0% (0.0 to 0.4)</td><td class=num>0 / 1065</td><td><div class=bar><span style='width:0%'></span></div></td></tr>
+<tr><td>Repos with .cursorrules</td><td class=num>0.1% (0.0 to 0.5)</td><td class=num>1 / 1065</td><td><div class=bar><span style='width:0.1%'></span></div></td></tr>
+<tr><td>Repos that use two or more file formats</td><td class=num>37.8% (28.5 to 48.1)</td><td class=num>34 / 90</td><td><div class=bar><span style='width:37.8%'></span></div></td></tr>
+<tr><td>Files that only point to another instruction file</td><td class=num>22.5% (16.1 to 30.4)</td><td class=num>29 / 129</td><td><div class=bar><span style='width:22.5%'></span></div></td></tr>
+<tr><td>Files with a commands section</td><td class=num>66.0% (56.3 to 74.5)</td><td class=num>66 / 100</td><td><div class=bar><span style='width:66.0%'></span></div></td></tr>
+<tr><td>Files with a testing section</td><td class=num>53.0% (43.3 to 62.5)</td><td class=num>53 / 100</td><td><div class=bar><span style='width:53.0%'></span></div></td></tr>
+<tr><td>Files with a style section</td><td class=num>55.0% (45.2 to 64.4)</td><td class=num>55 / 100</td><td><div class=bar><span style='width:55.0%'></span></div></td></tr>
+<tr><td>Files with an architecture section</td><td class=num>53.0% (43.3 to 62.5)</td><td class=num>53 / 100</td><td><div class=bar><span style='width:53.0%'></span></div></td></tr>
+<tr><td>Files with a boundaries section</td><td class=num>35.0% (26.4 to 44.7)</td><td class=num>35 / 100</td><td><div class=bar><span style='width:35.0%'></span></div></td></tr>
+<tr><td>Files with at least one drifted command</td><td class=num>5.6% (1.5 to 18.1)</td><td class=num>2 / 36</td><td><div class=bar><span style='width:5.6%'></span></div></td></tr>
+<tr><td>Checkable commands that drift</td><td class=num>3.5% (1.8 to 6.7)</td><td class=num>8 / 230</td><td><div class=bar><span style='width:3.5%'></span></div></td></tr></table><h2>Repos with any instruction file, by language</h2><table><tr><th>Language</th><th>Result (95% CI)</th><th>k / n</th><th></th></tr><tr><td>language=C++</td><td class=num>8.1% (4.6 to 14.0)</td><td class=num>11 / 135</td><td><div class=bar><span style='width:8.1%'></span></div></td></tr>
+<tr><td>language=Go</td><td class=num>6.7% (3.5 to 12.2)</td><td class=num>9 / 135</td><td><div class=bar><span style='width:6.7%'></span></div></td></tr>
+<tr><td>language=Java</td><td class=num>5.2% (2.5 to 10.3)</td><td class=num>7 / 135</td><td><div class=bar><span style='width:5.2%'></span></div></td></tr>
+<tr><td>language=JavaScript</td><td class=num>6.7% (3.5 to 12.2)</td><td class=num>9 / 135</td><td><div class=bar><span style='width:6.7%'></span></div></td></tr>
+<tr><td>language=Python</td><td class=num>10.0% (5.8 to 16.7)</td><td class=num>12 / 120</td><td><div class=bar><span style='width:10.0%'></span></div></td></tr>
+<tr><td>language=Ruby</td><td class=num>8.1% (4.6 to 14.0)</td><td class=num>11 / 135</td><td><div class=bar><span style='width:8.1%'></span></div></td></tr>
+<tr><td>language=Rust</td><td class=num>6.7% (3.5 to 12.2)</td><td class=num>9 / 135</td><td><div class=bar><span style='width:6.7%'></span></div></td></tr>
+<tr><td>language=TypeScript</td><td class=num>16.3% (11.0 to 23.4)</td><td class=num>22 / 135</td><td><div class=bar><span style='width:16.3%'></span></div></td></tr></table><h2>Repos with any instruction file, by star band</h2><table><tr><th>Star band</th><th>Result (95% CI)</th><th>k / n</th><th></th></tr><tr><td>star_band=10..99</td><td class=num>6.1% (4.0 to 9.1)</td><td class=num>21 / 345</td><td><div class=bar><span style='width:6.1%'></span></div></td></tr>
+<tr><td>star_band=100..999</td><td class=num>6.1% (4.1 to 9.1)</td><td class=num>22 / 360</td><td><div class=bar><span style='width:6.1%'></span></div></td></tr>
+<tr><td>star_band=&gt;=1000</td><td class=num>13.1% (10.0 to 16.9)</td><td class=num>47 / 360</td><td><div class=bar><span style='width:13.1%'></span></div></td></tr></table><h2>Repos with any instruction file, by last push year</h2><table><tr><th>Last push year</th><th>Result (95% CI)</th><th>k / n</th><th></th></tr><tr><td>push_year=2024</td><td class=num>0.0% (0.0 to 1.1)</td><td class=num>0 / 360</td><td><div class=bar><span style='width:0%'></span></div></td></tr>
+<tr><td>push_year=2025</td><td class=num>0.6% (0.2 to 2.0)</td><td class=num>2 / 360</td><td><div class=bar><span style='width:0.6%'></span></div></td></tr>
+<tr><td>push_year=2026</td><td class=num>25.5% (21.2 to 30.4)</td><td class=num>88 / 345</td><td><div class=bar><span style='width:25.5%'></span></div></td></tr></table><h2>Drift detector check</h2><table><tr><th>Measure</th><th>Result (95% CI)</th><th>k / n</th><th></th></tr><tr><td>Drift detector precision, 30 labeled snippets</td><td class=num>100.0% (74.1 to 100.0)</td><td class=num>11 / 11</td><td><div class=bar><span style='width:100.0%'></span></div></td></tr>
+<tr><td>Drift detector recall, 30 labeled snippets</td><td class=num>91.7% (64.6 to 98.5)</td><td class=num>11 / 12</td><td><div class=bar><span style='width:91.7%'></span></div></td></tr>
+<tr><td>Drift detector precision, 12 held-out snippets</td><td class=num>100.0% (67.6 to 100.0)</td><td class=num>8 / 8</td><td><div class=bar><span style='width:100.0%'></span></div></td></tr>
+<tr><td>Drift detector recall, 12 held-out snippets</td><td class=num>72.7% (43.4 to 90.3)</td><td class=num>8 / 11</td><td><div class=bar><span style='width:72.7%'></span></div></td></tr>
+<tr><td>Two blind labelers agree on a snippet</td><td class=num>96.7% (83.3 to 99.4)</td><td class=num>29 / 30</td><td><div class=bar><span style='width:96.7%'></span></div></td></tr></table><p>Scored on synthetic snippets labeled on 2026-11-20. The held-out set was written by a separate agent and the detector was not tuned on it.</p>
+</body></html>

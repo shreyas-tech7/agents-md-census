@@ -1,0 +1,62 @@
+{
+ "about": "Second labels for the 30 snippets in drift_snippets.json, made by a separate agent that never saw the first labels. Collected 2026-11-20.",
+ "labeler": "independent subagent, blind to the first labels",
+ "labels": {
+  "S01": [],
+  "S02": [
+   "npm typecheck"
+  ],
+  "S03": [
+   "npm test"
+  ],
+  "S04": [],
+  "S05": [
+   "make lint"
+  ],
+  "S06": [],
+  "S07": [],
+  "S08": [],
+  "S09": [
+   "pnpm check"
+  ],
+  "S10": [],
+  "S11": [],
+  "S12": [
+   "make docs"
+  ],
+  "S13": [],
+  "S14": [
+   "poe format"
+  ],
+  "S15": [],
+  "S16": [],
+  "S17": [
+   "npm test:e2e"
+  ],
+  "S18": [],
+  "S19": [],
+  "S20": [
+   "make release"
+  ],
+  "S21": [],
+  "S22": [],
+  "S23": [],
+  "S24": [
+   "make bench"
+  ],
+  "S25": [],
+  "S26": [
+   "bun seed"
+  ],
+  "S27": [
+   "npm start:prod"
+  ],
+  "S28": [],
+  "S29": [
+   "make fmt"
+  ],
+  "S30": [
+   "npm prepare-db"
+  ]
+ }
+}

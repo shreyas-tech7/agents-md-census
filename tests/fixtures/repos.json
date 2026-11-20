@@ -1,0 +1,24 @@
+{
+  "about": "Synthetic repos in the shape the collector sees from raw.githubusercontent.com. Repo names and text are made up for tests.",
+  "repos": {
+    "fixture-org/alpha": {
+      "AGENTS.md": "# Agent guide\n\n## Commands\n\n```bash\nnpm run build\nnpm run lint\n```\n\n## Testing\n\nRun `npm test`.\n\n## Code style\n\nUse two spaces.\n",
+      "CLAUDE.md": "See AGENTS.md\n",
+      "package.json": "{\"name\": \"alpha\", \"scripts\": {\"build\": \"tsc\", \"test\": \"vitest\"}}"
+    },
+    "fixture-org/beta": {
+      "CLAUDE.md": "# Project notes\n\n## Architecture\n\nThe api lives in src/api.\n\n## Rules\n\nNever edit generated files.\n\n```\nmake test\nmake docs\n```\n",
+      ".github/copilot-instructions.md": "# Project notes\n\n## Architecture\n\nThe api lives in src/api.\n\nKeep functions short.\n",
+      "Makefile": ".PHONY: test\ntest:\n\tpytest\n",
+      "pyproject.toml": "[project]\nname = \"beta\"\n"
+    },
+    "fixture-org/gamma": {
+      "pyproject.toml": "[project]\nname = \"gamma\"\n"
+    },
+    "fixture-org/delta": {
+      ".cursorrules": "Prefer small pure functions. Write tests with pytest.\n",
+      "GEMINI.md": "# Gemini\n\n## Setup\n\n`poe test`\n",
+      "pyproject.toml": "[tool.poe.tasks]\ntest = \"pytest\"\n"
+    }
+  }
+}

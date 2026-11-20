@@ -1,0 +1,125 @@
+{
+ "about": "12 hard synthetic snippets written and labeled by a separate agent, 2026-11-20. The detector was not tuned on them. They are a held-out check.",
+ "labeled_on": "2026-11-20",
+ "labeler": "independent subagent, blind to the first labels",
+ "snippets": [
+  {
+   "drift": [
+    "npm lint"
+   ],
+   "id": "H01",
+   "manifests": {
+    "package.json": "{\"scripts\": {\"build\": \"tsc -p .\"}}"
+   },
+   "text": "## Windows\r\n\r\n```powershell\r\nPS C:\\repo> npm run build\r\nPS C:\\repo> npm run lint\r\n```\r\n"
+  },
+  {
+   "drift": [],
+   "id": "H02",
+   "manifests": {
+    "package.json": "{\"scripts\": {\"dev\": \"vite\"}}"
+   },
+   "text": "```bash\n# npm run legacy-seed  (removed in v2, do not use)\nnpm run dev   # starts on :3000\n```\n"
+  },
+  {
+   "drift": [
+    "npm gen"
+   ],
+   "id": "H03",
+   "manifests": {
+    "package.json": "{\"scripts\": {\"build\": \"tsup\"}}"
+   },
+   "text": "Regenerate and build in one go:\n\n```bash\nbash -c \"npm run gen && npm run build\"\n```\n"
+  },
+  {
+   "drift": [
+    "make lint"
+   ],
+   "id": "H04",
+   "manifests": {
+    "Makefile": "fmt::\n\tgofmt -w .\nfmt::\n\tgoimports -w .\nvet::\n\tgo vet ./...\n"
+   },
+   "text": "```\nmake fmt; make vet || make lint\n```\n"
+  },
+  {
+   "drift": [
+    "npm build",
+    "npm test"
+   ],
+   "id": "H05",
+   "manifests": {
+    "package.json": "{\"name\": \"tiny-lib\", \"version\": \"0.1.0\", \"main\": \"index.js\"}"
+   },
+   "text": "```bash\nnpm install\nnpm run build\nnpm test\n```\n"
+  },
+  {
+   "drift": [
+    "pnpm lint:css"
+   ],
+   "id": "H06",
+   "manifests": {
+    "package.json": "{\"scripts\": {\"lint:fix\": \"eslint . --fix\", \"lint:js\": \"eslint src\"}}"
+   },
+   "text": "Fix lint with `pnpm lint:fix`. For styles, run `pnpm run lint:css`. JS only: `pnpm run lint:js`."
+  },
+  {
+   "drift": [],
+   "id": "H07",
+   "manifests": {
+    "package.json": "{\"scripts\": {\"build\": \"tsc\"}}"
+   },
+   "text": "The `build` script runs tsc. Never run npm run deploy by hand, CI does that. Locally, `npm run build` is enough."
+  },
+  {
+   "drift": [
+    "make help"
+   ],
+   "id": "H08",
+   "manifests": {
+    "Makefile": "build:\n\tgo build ./...\n",
+    "package.json": "{\"scripts\": {\"dev\": \"next dev\"}}"
+   },
+   "text": "```bash\nmake <target>\nnpm run $SCRIPT\nyarn {name}\nmake help\n```\n"
+  },
+  {
+   "drift": [
+    "npm typecheck"
+   ],
+   "id": "H09",
+   "manifests": {
+    "package.json": "{\"private\": true, \"workspaces\": [\"api\", \"client\", \"packages/*\"], \"scripts\": {}}"
+   },
+   "text": "```bash\nyarn workspace api test\nnpm --prefix client run build\nnpm run lint -w packages/ui\nnpm run typecheck\n```\n"
+  },
+  {
+   "drift": [
+    "make docs"
+   ],
+   "id": "H10",
+   "manifests": {
+    "Makefile": "test-%:\n\tpytest tests/$*\n.PHONY: build\nbuild:\n\tpython -m build\n"
+   },
+   "text": "Run one suite with `make test-unit`. Build docs with `make docs`."
+  },
+  {
+   "drift": [
+    "poe typecheck"
+   ],
+   "id": "H11",
+   "manifests": {
+    "pyproject.toml": "[tool.poetry]\nname = \"demo\"\n\n[tool.poe.tasks.lint]\ncmd = \"ruff check .\"\nhelp = \"Lint the code\"\n"
+   },
+   "text": "```bash\npoetry run poe lint\npoe typecheck\n```\n"
+  },
+  {
+   "drift": [
+    "npm e2e"
+   ],
+   "id": "H12",
+   "manifests": {
+    "package.json": "{\"scripts\": {\"test\": \"vitest run\"}}"
+   },
+   "text": "Quick start:\n\n    $ npx vitest run\n    $ npm run-script test\n    $ npm run e2e\n    $ npm run\n\nThe last line lists every script."
+  }
+ ]
+}
