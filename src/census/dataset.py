@@ -156,7 +156,7 @@ def summarize(repos: list[dict], files: list[dict], n_sampled: int, dates: list[
         prop(
             sum(r["n_instruction_files"] >= 2 for r in with_any),
             len(with_any),
-            "Repos with a file that use two or more formats",
+            "Repos that use two or more file formats",
             "repos with a file",
         ),
         prop(

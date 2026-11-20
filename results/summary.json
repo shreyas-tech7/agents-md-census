@@ -255,7 +255,7 @@
       "ci_low": 28.5,
       "date": "2026-11-20",
       "k": 34,
-      "label": "Repos with a file that use two or more formats",
+      "label": "Repos that use two or more file formats",
       "method": "Wilson score 95%",
       "n": 90,
       "pct": 37.8,

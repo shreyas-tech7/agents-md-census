@@ -2,7 +2,7 @@
 
 [![ci](https://github.com/shreyas-tech7/agents-md-census/actions/workflows/ci.yml/badge.svg)](https://github.com/shreyas-tech7/agents-md-census/actions/workflows/ci.yml)
 
-**Status:** v0.1.0-rc1, pilot sample. The dataset comes from one collection run in a cloud session. The full-size run is a manual workflow that has not run yet.
+**Status:** v0.1.0-rc1. The dataset of 1,065 repos comes from one collection run in a cloud session on 2026-11-20. A larger run with more repos per stratum is a manual workflow that has not run yet.
 
 ## The problem
 
@@ -39,7 +39,7 @@ Sample: 1065 public repos collected on 2026-11-20, out of 1065 sampled. Interval
 | Repos with GEMINI.md | 0.2% (0.1 to 0.7) | 2 / 1065 | repos |
 | Repos with SKILL.md | 0.0% (0.0 to 0.4) | 0 / 1065 | repos |
 | Repos with .cursorrules | 0.1% (0.0 to 0.5) | 1 / 1065 | repos |
-| Repos with a file that use two or more formats | 37.8% (28.5 to 48.1) | 34 / 90 | repos with a file |
+| Repos that use two or more file formats | 37.8% (28.5 to 48.1) | 34 / 90 | repos with a file |
 | Files that only point to another instruction file | 22.5% (16.1 to 30.4) | 29 / 129 | files |
 | Files with a commands section | 66.0% (56.3 to 74.5) | 66 / 100 | non-pointer files |
 | Files with a testing section | 53.0% (43.3 to 62.5) | 53 / 100 | non-pointer files |
@@ -59,7 +59,7 @@ Cost of this run: 144 Search API requests, 7350 raw file requests (6.9 per repo)
 
 ## Cost per task
 
-The census calls no model and costs nothing to run. The cost line under the results table gives the exact request counts. Collection is the slow part. The collector paces itself to stay inside GitHub's limits and slows to one request a second after any secondary limit, so a pilot of about 1,000 repos took a few hours in the build session.
+The census calls no model and costs nothing to run. The cost line under the results table gives the exact request counts. Collection is the slow part. The collector paces itself to stay inside GitHub's limits and slows to one request a second after any secondary limit, so the run of 1,065 repos took a few hours in the build session.
 
 ## Run it in 10 minutes
 
@@ -92,7 +92,7 @@ The short version is below. Read [LIMITATIONS.md](LIMITATIONS.md) before you quo
 - The collector reads nine fixed paths. It misses `.cursor/rules/` folders, nested `SKILL.md` files and files in subfolders.
 - Drift checks root manifests only. It covers npm, pnpm, yarn and bun scripts, Make targets and poe tasks. Other ecosystems such as Cargo, Go, Gradle, just and `uv run` are not covered.
 - The detector was scored on synthetic snippets. Real files are messier.
-- The pilot sample comes from one day.
+- The sample comes from one day.
 
 ## Glossary
 

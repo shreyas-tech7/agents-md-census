@@ -12,7 +12,7 @@ Each entry: what failed, the exact error, and what was done instead.
 Bug log (frequency x severity):
 
 - Live bug, fixed: the sampler used an undefined `per_page` on the first run (5 x 5 = 25). Fixed before any data was written.
-- Test gap, logged: the detector misses PowerShell prompt lines and commands inside `bash -c "..."` (held-out H01 and H03). Score 2 x 2 = 4. Logged in `LIMITATIONS.md`, not fixed, to keep the held-out set honest.
+- Test gap, logged: the detector misses PowerShell prompt lines and commands inside `bash -c "..."` (held-out H01 and H03). It also treats a Makefile with a pattern rule as open, so it misses `make docs` in H10 and `make fmt` in S29. Score 2 x 2 = 4. Logged in `LIMITATIONS.md`, not fixed, to keep the held-out set honest.
 - Live bug, fixed in the ponytail-review pass: a transfer cut mid-body (`http.client.IncompleteRead`) was not caught and would end a collection chunk (3 x 3 = 9). Now it counts as a network error, is retried, and the repo is marked failed for the next run.
 - Live bug, fixed in the same pass: a `Retry-After` header given as an HTTP date would crash the backoff (1 x 5 = 5). Now it falls back to the exponential wait.
 - Live bug, fixed: when one command name appeared both scoped (`cd web && npm run build`) and at the root, the scoped verdict could hide the root drift (3 x 2 = 6).

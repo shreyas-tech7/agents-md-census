@@ -4,7 +4,7 @@ Each answer points to the code (file and function) and to a result (file and num
 
 ### 1. What does this project do, in one breath?
 
-It draws a stratified sample of public GitHub repos, fetches their agent instruction files (`AGENTS.md`, `CLAUDE.md` and four others) plus their root manifests, and measures two things: what the files contain and how often their commands drift from the manifests. The pipeline is `census sample`, `census collect`, `census analyze`, `census report` in `src/census/cli.py`. The pilot covers 1,065 repos (`results/summary.json`, `n_repos`).
+It draws a stratified sample of public GitHub repos, fetches their agent instruction files (`AGENTS.md`, `CLAUDE.md` and four others) plus their root manifests, and measures two things: what the files contain and how often their commands drift from the manifests. The pipeline is `census sample`, `census collect`, `census analyze`, `census report` in `src/census/cli.py`. The census covers 1,065 repos (`results/summary.json`, `n_repos`).
 
 ### 2. Why stratified sampling and not the first page of search results?
 
@@ -32,7 +32,7 @@ Many of the proportions here are small or near 0%, like `SKILL.md` at 0.0% (0 of
 
 ### 8. What is drift, exactly?
 
-A command drifts when an instruction file names a script or target that the root manifest does not define, for example `npm run typecheck` in a repo whose `package.json` has no `typecheck` script. `drift.check()` in `src/census/drift.py` gives each command one of three verdicts: ok, drift or unverifiable. In the pilot, 3.5% (8 of 230, CI 1.8 to 6.7) of checkable commands drift (`results/summary.json`, "Checkable commands that drift").
+A command drifts when an instruction file names a script or target that the root manifest does not define, for example `npm run typecheck` in a repo whose `package.json` has no `typecheck` script. `drift.check()` in `src/census/drift.py` gives each command one of three verdicts: ok, drift or unverifiable. In this census, 3.5% (8 of 230, CI 1.8 to 6.7) of checkable commands drift (`results/summary.json`, "Checkable commands that drift").
 
 ### 9. What does the drift check miss?
 
@@ -54,7 +54,7 @@ The detector says "unverifiable" whenever it cannot be sure. A command after `cd
 
 Repo names and computed numbers only: sizes, section flags, overlap and drift counts (`REPO_FIELDS` and `FILE_FIELDS` in `src/census/dataset.py`). No file text, no authors and no emails. The raw files stay in `.cache/`, which is git-ignored and named by hash. The report shows totals only and never calls out one repo. `tests/test_pipeline.py::test_dataset_counts_and_privacy` checks that no file text leaks into the outputs.
 
-### 14. What did the pilot find?
+### 14. What did the census find?
 
 Of 1,065 repos, 8.5% (90 of 1065, CI 6.9 to 10.3) have at least one agent instruction file and 6.0% (64 of 1065, CI 4.7 to 7.6) have `AGENTS.md`. Among repos with a file, 37.8% (34 of 90, CI 28.5 to 48.1) use two or more formats, and 22.5% (29 of 129, CI 16.1 to 30.4) of files only point to another one. Of files with a checkable command, 5.6% (2 of 36, CI 1.5 to 18.1) have at least one drifted command. Every number has its Wilson interval in the README table and in `results/summary.json`, dated 2026-11-20.
 

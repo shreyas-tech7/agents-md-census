@@ -7,24 +7,21 @@ Branch: `claude/build-agents-md-census`. Remote for this build: a local bare rep
 - Initializer: memory files, `init.sh`, `PROJECT_CONTEXT.md`, `CLAUDE.md`, plan, license, secret scan hook.
 - Offline test guard, synthetic fixtures and a scripted fake server.
 - Stratified sampler: 8 languages, 3 star bands, 3 push years, 15 repos per stratum, seed 20261120. Sample of 1,065 repos in `data/sample.csv`.
-- Collector state machine with a hashed disk cache, header pacing, backoff and resume. The 403 and 429 test passes.
+- Collector state machine with a hashed disk cache, header pacing, backoff and resume. All 1,065 repos collected on 2026-11-20, none failed.
 - Analyzer and drift detector, scored on 30 labeled snippets and 12 held-out snippets.
-- Wilson intervals, dataset writer, report site, README table generator, social preview.
+- Dataset, `results/summary.json`, report site, README table and social preview, rebuilt from the full cache. The rebuild is byte for byte the same.
 - CI, pilot and full-run workflows, all clean under actionlint.
-- README, METHODOLOGY, LIMITATIONS, WALKTHROUGH, CHANGELOG, CONTRIBUTING, issue templates, topics, human steps and the Cowork hand-off prompt.
+- README, METHODOLOGY, LIMITATIONS, WALKTHROUGH, INTERVIEW_QA, DEMO, CHANGELOG, CONTRIBUTING, issue templates, topics, human steps and the Cowork hand-off prompt.
+- All 18 features in `feature_list.json` pass their steps. An outside check from a fresh clone passed every Done-means item.
 
 ## Next
 
-- Finish collecting the remaining repos (`census collect`, run again until no repo is queued or failed).
-- Rebuild the dataset and report, then refresh the README table and social preview.
-- Write `docs/INTERVIEW_QA.md` and `docs/DEMO.md` from the final numbers.
-- Run every feature's steps and set the `passes` flags.
-- Outside check from a fresh clone, release commit, bundle and final report.
+- Shreyas's steps in `docs/HUMAN_STEPS.md`, starting with creating the GitHub repo and pushing the bundle.
 
 ## Open blockers
 
-- No GitHub repo and no working GitHub token. Push, PR, Actions, tags and releases wait for Shreyas. See `docs/HUMAN_STEPS.md`.
+- No GitHub repo and no working GitHub token. Push to GitHub, PR, Actions, tags and releases wait for Shreyas.
 
 ## Last `./init.sh`
 
-Passed: lint clean, 40 tests passed offline.
+Passed: lint clean, 40 tests passed offline, self-check found 0 drifted commands.

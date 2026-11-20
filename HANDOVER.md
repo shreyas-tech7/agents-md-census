@@ -4,9 +4,11 @@ Read this if a session stops before the final report. Then read `PROGRESS.md`.
 
 ## Done
 
-Everything in `PROGRESS.md` under "Done". The code, tests, docs and workflows are complete. The only long job is collection.
+The build is complete. Every Done-means item passes. See `PROGRESS.md`.
 
 ## Next, in order
+
+Only Shreyas's steps are left. They are in `docs/HUMAN_STEPS.md`. To refresh the dataset later:
 
 ```bash
 source .venv/bin/activate
@@ -16,8 +18,6 @@ python3 scripts/build_readme.py && python3 scripts/social_preview.py
 scripts/rebuild_check.sh            # the rebuild must match byte for byte
 ./init.sh                           # lint and all tests offline
 ```
-
-Then write `docs/INTERVIEW_QA.md` and `docs/DEMO.md` from the final numbers, set the `passes` flags in `feature_list.json`, commit with `gitleaks git --pre-commit --redact --staged`, and push.
 
 ## Open decisions
 
