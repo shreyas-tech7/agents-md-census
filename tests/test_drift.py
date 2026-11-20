@@ -64,3 +64,11 @@ def test_eval_matches_results_file(tmp_path):
 def test_this_repo_has_no_drift():
     """Practice what the census measures: our own AGENTS.md and CLAUDE.md."""
     assert drift.self_check(ROOT) == []
+
+
+def test_same_name_scoped_and_unscoped_counts_once_as_checkable():
+    """Broken case: the scoped copy overwrote the root verdict, hiding drift."""
+    pkg = {"package.json": '{"scripts": {"dev": "vite"}}'}
+    text = "```\nnpm run build\ncd web && npm run build\n```"
+    rep = drift.drift_report(text, drift.parse_manifests(pkg))
+    assert rep["drifted"] == ["npm build"] and rep["n_commands"] == 1

@@ -248,7 +248,14 @@ def check(cmd: Command, m: Manifests) -> str:
 
 
 def drift_report(text: str, m: Manifests) -> dict:
-    results = {c.label: check(c, m) for c in extract_commands(text)}
+    # One verdict per command name. When the same name appears both scoped and
+    # unscoped, the unscoped (checkable) verdict wins.
+    rank = {DRIFT: 2, OK: 1, UNVERIFIABLE: 0}
+    results: dict[str, str] = {}
+    for c in extract_commands(text):
+        v = check(c, m)
+        if c.label not in results or rank[v] > rank[results[c.label]]:
+            results[c.label] = v
     return {
         "n_commands": len(results),
         "n_ok": sum(v == OK for v in results.values()),

@@ -1,0 +1,583 @@
+{
+  "per_stratum": 15,
+  "queries": [
+    {
+      "fetched_on": "2026-11-20",
+      "page": 57,
+      "per_page": 15,
+      "query": "language:Python stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 50366
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 50,
+      "per_page": 15,
+      "query": "language:Python stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 58217
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 38,
+      "per_page": 15,
+      "query": "language:Python stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 132565
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 28,
+      "per_page": 15,
+      "query": "language:Python stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 10095
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 18,
+      "per_page": 15,
+      "query": "language:Python stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 9793
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 54,
+      "per_page": 15,
+      "query": "language:Python stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 32080
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 14,
+      "per_page": 15,
+      "query": "language:Python stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1371
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 55,
+      "per_page": 15,
+      "query": "language:Python stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1167
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 18,
+      "per_page": 15,
+      "query": "language:Python stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 6949
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 17,
+      "per_page": 15,
+      "query": "language:JavaScript stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 20465
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 40,
+      "per_page": 15,
+      "query": "language:JavaScript stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 20257
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 28,
+      "per_page": 15,
+      "query": "language:JavaScript stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 52623
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 60,
+      "per_page": 15,
+      "query": "language:JavaScript stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 4204
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 48,
+      "per_page": 15,
+      "query": "language:JavaScript stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 3119
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 43,
+      "per_page": 15,
+      "query": "language:JavaScript stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 12579
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 11,
+      "per_page": 15,
+      "query": "language:JavaScript stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 924
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 20,
+      "per_page": 15,
+      "query": "language:JavaScript stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 526
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 12,
+      "per_page": 15,
+      "query": "language:JavaScript stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 3166
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 39,
+      "per_page": 15,
+      "query": "language:TypeScript stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 15563
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 7,
+      "per_page": 15,
+      "query": "language:TypeScript stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 19404
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 15,
+      "per_page": 15,
+      "query": "language:TypeScript stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 71683
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 45,
+      "per_page": 15,
+      "query": "language:TypeScript stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 2762
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 52,
+      "per_page": 15,
+      "query": "language:TypeScript stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 3185
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 48,
+      "per_page": 15,
+      "query": "language:TypeScript stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 18501
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 11,
+      "per_page": 15,
+      "query": "language:TypeScript stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 393
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 13,
+      "per_page": 15,
+      "query": "language:TypeScript stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 431
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 47,
+      "per_page": 15,
+      "query": "language:TypeScript stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 5138
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 48,
+      "per_page": 15,
+      "query": "language:Go stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 5749
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 2,
+      "per_page": 15,
+      "query": "language:Go stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 6606
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 31,
+      "per_page": 15,
+      "query": "language:Go stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 25115
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 46,
+      "per_page": 15,
+      "query": "language:Go stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1448
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 30,
+      "per_page": 15,
+      "query": "language:Go stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1389
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 56,
+      "per_page": 15,
+      "query": "language:Go stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 8168
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 16,
+      "per_page": 15,
+      "query": "language:Go stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 303
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 2,
+      "per_page": 15,
+      "query": "language:Go stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 245
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 54,
+      "per_page": 15,
+      "query": "language:Go stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 2751
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 48,
+      "per_page": 15,
+      "query": "language:Rust stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 5120
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 6,
+      "per_page": 15,
+      "query": "language:Rust stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 6224
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 41,
+      "per_page": 15,
+      "query": "language:Rust stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 28340
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 54,
+      "per_page": 15,
+      "query": "language:Rust stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 940
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 62,
+      "per_page": 15,
+      "query": "language:Rust stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1027
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 59,
+      "per_page": 15,
+      "query": "language:Rust stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 7997
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 4,
+      "per_page": 15,
+      "query": "language:Rust stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 100
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 7,
+      "per_page": 15,
+      "query": "language:Rust stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 132
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 35,
+      "per_page": 15,
+      "query": "language:Rust stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 2082
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 52,
+      "per_page": 15,
+      "query": "language:Java stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 8300
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 48,
+      "per_page": 15,
+      "query": "language:Java stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 7711
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 1,
+      "per_page": 15,
+      "query": "language:Java stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 21038
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 59,
+      "per_page": 15,
+      "query": "language:Java stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1641
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 5,
+      "per_page": 15,
+      "query": "language:Java stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1372
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 40,
+      "per_page": 15,
+      "query": "language:Java stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 5826
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 22,
+      "per_page": 15,
+      "query": "language:Java stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 337
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 2,
+      "per_page": 15,
+      "query": "language:Java stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 208
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 27,
+      "per_page": 15,
+      "query": "language:Java stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1601
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 22,
+      "per_page": 15,
+      "query": "language:C++ stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 10240
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 9,
+      "per_page": 15,
+      "query": "language:C++ stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 11056
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 20,
+      "per_page": 15,
+      "query": "language:C++ stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 28606
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 43,
+      "per_page": 15,
+      "query": "language:C++ stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 2351
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 37,
+      "per_page": 15,
+      "query": "language:C++ stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 2149
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 44,
+      "per_page": 15,
+      "query": "language:C++ stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 8481
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 14,
+      "per_page": 15,
+      "query": "language:C++ stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 309
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 5,
+      "per_page": 15,
+      "query": "language:C++ stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 242
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 4,
+      "per_page": 15,
+      "query": "language:C++ stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 2184
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 6,
+      "per_page": 15,
+      "query": "language:Ruby stars:10..99 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1507
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 64,
+      "per_page": 15,
+      "query": "language:Ruby stars:10..99 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1459
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 34,
+      "per_page": 15,
+      "query": "language:Ruby stars:10..99 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 5142
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 1,
+      "per_page": 15,
+      "query": "language:Ruby stars:100..999 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 464
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 9,
+      "per_page": 15,
+      "query": "language:Ruby stars:100..999 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 405
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 10,
+      "per_page": 15,
+      "query": "language:Ruby stars:100..999 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 1920
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 2,
+      "per_page": 15,
+      "query": "language:Ruby stars:>=1000 pushed:2024-01-01..2024-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 79
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 3,
+      "per_page": 15,
+      "query": "language:Ruby stars:>=1000 pushed:2025-01-01..2025-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 57
+    },
+    {
+      "fetched_on": "2026-11-20",
+      "page": 1,
+      "per_page": 15,
+      "query": "language:Ruby stars:>=1000 pushed:2026-01-01..2026-12-31 fork:false archived:false",
+      "status": 200,
+      "total_count": 586
+    }
+  ],
+  "sampled_on": "2026-11-20",
+  "seed": 20261120
+}

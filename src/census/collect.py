@@ -77,10 +77,7 @@ def collect(
         log.set(repo, "queued")
         _hook(stop_at, repo, "queued")
         try:
-            responses = [
-                fetcher.cached(raw_url(repo, p, raw)) or fetcher.fetch(raw_url(repo, p, raw))
-                for p in PATHS
-            ]
+            responses = _fetch_all(fetcher, repo, raw)
         except RateLimited:
             log.set(repo, "failed")
             break
@@ -102,6 +99,20 @@ def collect(
     for repo in repos:
         counts[log.state.get(repo, "queued")] += 1
     return counts
+
+
+def _fetch_all(fetcher: Fetcher, repo: str, raw: str) -> list:
+    """Instruction files first. Manifests only matter for checking commands,
+    so they are fetched only when the repo has an instruction file."""
+
+    def one(path):
+        url = raw_url(repo, path, raw)
+        return fetcher.cached(url) or fetcher.fetch(url)
+
+    found = [one(p) for p in INSTRUCTION_FILES]
+    if any(r.status == 200 for r in found):
+        found += [one(p) for p in MANIFESTS]
+    return found
 
 
 def _hook(stop_at, repo, state):

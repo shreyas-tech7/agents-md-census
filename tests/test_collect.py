@@ -1,7 +1,7 @@
 import pytest
 from conftest import FakeClock, serve_repos
 
-from census.collect import PATHS, StateLog, Stop, collect
+from census.collect import MANIFESTS, PATHS, StateLog, Stop, collect
 from census.http import Fetcher
 
 REPOS = ["fixture-org/alpha", "fixture-org/beta", "fixture-org/gamma"]
@@ -23,7 +23,8 @@ def test_collects_every_repo(server, tmp_path, fixture_repos):
     serve_repos(server, fixture_repos)
     counts = collect(fetcher(tmp_path), REPOS, tmp_path / "state.jsonl", raw=server.url)
     assert counts["done"] == 3
-    assert len(server.hits) == 3 * len(PATHS)
+    # gamma has no instruction file, so its three manifests are never asked for
+    assert len(server.hits) == 3 * len(PATHS) - len(MANIFESTS)
 
 
 @pytest.mark.parametrize("stop_state", ["queued", "fetched", "cached", "done"])
