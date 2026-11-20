@@ -28,33 +28,33 @@ flowchart LR
 The table below is written by `scripts/build_readme.py` from `results/summary.json` and `results/drift_eval.json`. A test fails if it drifts from those files. The full report, with breakdowns by language, star band and push year, is at [docs/report/index.html](docs/report/index.html). It opens from disk.
 
 <!-- results:start -->
-Sample: 519 public repos collected on 2026-11-20, out of 1065 sampled. Intervals are 95% Wilson score intervals. Counts have no model and no seed. The sample seed is in `data/queries.json`.
+Sample: 1065 public repos collected on 2026-11-20, out of 1065 sampled. Intervals are 95% Wilson score intervals. Counts have no model and no seed. The sample seed is in `data/queries.json`.
 
 | Measure | Result (95% CI) | k / n | Unit |
 | --- | --- | --- | --- |
-| Repos with at least one agent instruction file | 9.1% (6.9 to 11.8) | 47 / 519 | repos |
-| Repos with AGENTS.md | 6.4% (4.6 to 8.8) | 33 / 519 | repos |
-| Repos with CLAUDE.md | 5.6% (3.9 to 7.9) | 29 / 519 | repos |
-| Repos with .github/copilot-instructions.md | 1.0% (0.4 to 2.2) | 5 / 519 | repos |
-| Repos with GEMINI.md | 0.2% (0.0 to 1.1) | 1 / 519 | repos |
-| Repos with SKILL.md | 0.0% (0.0 to 0.7) | 0 / 519 | repos |
-| Repos with .cursorrules | 0.2% (0.0 to 1.1) | 1 / 519 | repos |
-| Repos with a file that use two or more formats | 38.3% (25.8 to 52.6) | 18 / 47 | repos with a file |
-| Files that only point to another instruction file | 26.1% (17.2 to 37.5) | 18 / 69 | files |
-| Files with a commands section | 64.7% (51.0 to 76.4) | 33 / 51 | non-pointer files |
-| Files with a testing section | 49.0% (35.9 to 62.3) | 25 / 51 | non-pointer files |
-| Files with a style section | 60.8% (47.1 to 73.0) | 31 / 51 | non-pointer files |
-| Files with an architecture section | 52.9% (39.5 to 65.9) | 27 / 51 | non-pointer files |
-| Files with a boundaries section | 35.3% (23.6 to 49.0) | 18 / 51 | non-pointer files |
-| Files with at least one drifted command | 5.9% (1.0 to 27.0) | 1 / 17 | files with a checkable command |
-| Checkable commands that drift | 5.9% (2.9 to 11.7) | 7 / 118 | checkable commands |
+| Repos with at least one agent instruction file | 8.5% (6.9 to 10.3) | 90 / 1065 | repos |
+| Repos with AGENTS.md | 6.0% (4.7 to 7.6) | 64 / 1065 | repos |
+| Repos with CLAUDE.md | 4.9% (3.7 to 6.3) | 52 / 1065 | repos |
+| Repos with .github/copilot-instructions.md | 0.9% (0.5 to 1.7) | 10 / 1065 | repos |
+| Repos with GEMINI.md | 0.2% (0.1 to 0.7) | 2 / 1065 | repos |
+| Repos with SKILL.md | 0.0% (0.0 to 0.4) | 0 / 1065 | repos |
+| Repos with .cursorrules | 0.1% (0.0 to 0.5) | 1 / 1065 | repos |
+| Repos with a file that use two or more formats | 37.8% (28.5 to 48.1) | 34 / 90 | repos with a file |
+| Files that only point to another instruction file | 22.5% (16.1 to 30.4) | 29 / 129 | files |
+| Files with a commands section | 66.0% (56.3 to 74.5) | 66 / 100 | non-pointer files |
+| Files with a testing section | 53.0% (43.3 to 62.5) | 53 / 100 | non-pointer files |
+| Files with a style section | 55.0% (45.2 to 64.4) | 55 / 100 | non-pointer files |
+| Files with an architecture section | 53.0% (43.3 to 62.5) | 53 / 100 | non-pointer files |
+| Files with a boundaries section | 35.0% (26.4 to 44.7) | 35 / 100 | non-pointer files |
+| Files with at least one drifted command | 5.6% (1.5 to 18.1) | 2 / 36 | files with a checkable command |
+| Checkable commands that drift | 3.5% (1.8 to 6.7) | 8 / 230 | checkable commands |
 | Drift detector precision, 30 labeled snippets | 100.0% (74.1 to 100.0) | 11 / 11 | predicted drift |
 | Drift detector recall, 30 labeled snippets | 91.7% (64.6 to 98.5) | 11 / 12 | labeled drift |
 | Drift detector precision, 12 held-out snippets | 100.0% (67.6 to 100.0) | 8 / 8 | predicted drift |
 | Drift detector recall, 12 held-out snippets | 72.7% (43.4 to 90.3) | 8 / 11 | labeled drift |
 | Two blind labelers agree on a snippet | 96.7% (83.3 to 99.4) | 29 / 30 | snippets |
 
-Cost of this run: 144 Search API requests, 3945 raw file requests (7.6 per repo), 0 model calls, $0. These are fixed counts.
+Cost of this run: 144 Search API requests, 7350 raw file requests (6.9 per repo), 0 model calls, $0. These are fixed counts.
 <!-- results:end -->
 
 ## Cost per task

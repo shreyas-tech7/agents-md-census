@@ -4,7 +4,7 @@ Each answer points to the code (file and function) and to a result (file and num
 
 ### 1. What does this project do, in one breath?
 
-It draws a stratified sample of public GitHub repos, fetches their agent instruction files (`AGENTS.md`, `CLAUDE.md` and four others) plus their root manifests, and measures two things: what the files contain and how often their commands drift from the manifests. The pipeline is `census sample`, `census collect`, `census analyze`, `census report` in `src/census/cli.py`. The pilot covers @@N_REPOS@@ repos (`results/summary.json`, `n_repos`).
+It draws a stratified sample of public GitHub repos, fetches their agent instruction files (`AGENTS.md`, `CLAUDE.md` and four others) plus their root manifests, and measures two things: what the files contain and how often their commands drift from the manifests. The pipeline is `census sample`, `census collect`, `census analyze`, `census report` in `src/census/cli.py`. The pilot covers 1,065 repos (`results/summary.json`, `n_repos`).
 
 ### 2. Why stratified sampling and not the first page of search results?
 
@@ -16,7 +16,7 @@ The Search API never returns more than 1,000 results for one query. `SEARCH_CAP 
 
 ### 4. How does the collector stay inside rate limits?
 
-`Fetcher` in `src/census/http.py` reads the `x-ratelimit-*` headers on every answer. `_note_primary_limit()` waits until the reset time once the budget is spent. `_exhausted()` treats `used >= limit` as spent too, because the proxy in this session kept `remaining` fixed at 30. On a 429, or a 403 that carries `Retry-After` or says "rate limit", `_backoff()` waits for `Retry-After`, else doubles from 60 seconds up to 900, and `fetch()` then slows to one request a second for the rest of the run. The collector also asks for manifests only when a repo has an instruction file (`_fetch_all()` in `src/census/collect.py`), which kept the run at @@PER_REPO@@ raw requests per repo (`results/summary.json`, `cost`).
+`Fetcher` in `src/census/http.py` reads the `x-ratelimit-*` headers on every answer. `_note_primary_limit()` waits until the reset time once the budget is spent. `_exhausted()` treats `used >= limit` as spent too, because the proxy in this session kept `remaining` fixed at 30. On a 429, or a 403 that carries `Retry-After` or says "rate limit", `_backoff()` waits for `Retry-After`, else doubles from 60 seconds up to 900, and `fetch()` then slows to one request a second for the rest of the run. The collector also asks for manifests only when a repo has an instruction file (`_fetch_all()` in `src/census/collect.py`), which kept the run at 6.9 raw requests per repo (`results/summary.json`, `cost`).
 
 ### 5. What happens if the collector stops halfway?
 
@@ -28,11 +28,11 @@ The Search API never returns more than 1,000 results for one query. `SEARCH_CAP 
 
 ### 7. Why Wilson intervals?
 
-Many of the proportions here are small or near 0%, like `SKILL.md` at @@SKILL@@. The simple "p plus or minus 1.96 standard errors" interval can go below 0% there, and it is too narrow for small counts. The Wilson score interval stays inside 0 to 100% and keeps close to its stated 95% coverage even when n is small. `stats.wilson()` in `src/census/stats.py` computes it, and `stats.proportion()` attaches n, method and date to every number. `tests/test_pipeline.py::test_wilson_known_values` checks it against known values.
+Many of the proportions here are small or near 0%, like `SKILL.md` at 0.0% (0 of 1065, CI 0.0 to 0.4). The simple "p plus or minus 1.96 standard errors" interval can go below 0% there, and it is too narrow for small counts. The Wilson score interval stays inside 0 to 100% and keeps close to its stated 95% coverage even when n is small. `stats.wilson()` in `src/census/stats.py` computes it, and `stats.proportion()` attaches n, method and date to every number. `tests/test_pipeline.py::test_wilson_known_values` checks it against known values.
 
 ### 8. What is drift, exactly?
 
-A command drifts when an instruction file names a script or target that the root manifest does not define, for example `npm run typecheck` in a repo whose `package.json` has no `typecheck` script. `drift.check()` in `src/census/drift.py` gives each command one of three verdicts: ok, drift or unverifiable. In the pilot, @@CMD_DRIFT@@ of checkable commands drift (`results/summary.json`, "Checkable commands that drift").
+A command drifts when an instruction file names a script or target that the root manifest does not define, for example `npm run typecheck` in a repo whose `package.json` has no `typecheck` script. `drift.check()` in `src/census/drift.py` gives each command one of three verdicts: ok, drift or unverifiable. In the pilot, 3.5% (8 of 230, CI 1.8 to 6.7) of checkable commands drift (`results/summary.json`, "Checkable commands that drift").
 
 ### 9. What does the drift check miss?
 
@@ -56,11 +56,11 @@ Repo names and computed numbers only: sizes, section flags, overlap and drift co
 
 ### 14. What did the pilot find?
 
-Of @@N_REPOS@@ repos, @@ANY@@ have at least one agent instruction file and @@AGENTS@@ have `AGENTS.md`. Among repos with a file, @@MULTI@@ use two or more formats, and @@POINTER@@ of files only point to another one. Of files with a checkable command, @@FILE_DRIFT@@ have at least one drifted command. Every number has its Wilson interval in the README table and in `results/summary.json`, dated @@DATE@@.
+Of 1,065 repos, 8.5% (90 of 1065, CI 6.9 to 10.3) have at least one agent instruction file and 6.0% (64 of 1065, CI 4.7 to 7.6) have `AGENTS.md`. Among repos with a file, 37.8% (34 of 90, CI 28.5 to 48.1) use two or more formats, and 22.5% (29 of 129, CI 16.1 to 30.4) of files only point to another one. Of files with a checkable command, 5.6% (2 of 36, CI 1.5 to 18.1) have at least one drifted command. Every number has its Wilson interval in the README table and in `results/summary.json`, dated 2026-11-20.
 
 ### 15. What did the census cost?
 
-No model calls and $0. The run made @@SEARCH@@ Search requests and @@RAW@@ raw file requests (`results/summary.json`, `cost`). Time is the real cost: at one request a second after a secondary limit, the collector does about 9 repos a minute.
+No model calls and $0. The run made 144 Search requests and 7,350 raw file requests (`results/summary.json`, `cost`). Time is the real cost: at one request a second after a secondary limit, the collector did between about 6 and 37 repos a minute in the build session.
 
 ### 16. Why does this repo have its own `AGENTS.md`?
 
