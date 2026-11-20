@@ -6,7 +6,7 @@ This file says how every number in the report is made. The code is the final wor
 
 The sampler splits GitHub into 72 strata: 8 languages (Python, JavaScript, TypeScript, Go, Rust, Java, C++, Ruby) times 3 star bands (10 to 99, 100 to 999, 1,000 or more) times 3 last-push years (2024, 2025, 2026). Every query also says `fork:false archived:false`.
 
-For each stratum it makes two Search API calls. The first asks for one result to learn the total count. The second asks for one page of 15 results. The page number is drawn at random with a fixed seed (20261120), from the pages the Search API can reach (it stops at 1,000 results). The first page of results is never the default. That matters because Search ranks by "best match", and the first page leans toward the most visible repos.
+For each stratum it makes two Search API calls. The first asks for one result to learn the total count. The second asks for one page of 15 results. The page number is drawn at random with a fixed seed (20261120), from the pages the Search API can reach (it stops at 1,000 results). The sampler does not default to the first page, because Search ranks by "best match" and the first page leans toward the most visible repos.
 
 The sampler drops duplicates and writes `data/sample.csv` and `data/queries.json`. The second file holds every query, its total count, the page used, the seed and the date.
 

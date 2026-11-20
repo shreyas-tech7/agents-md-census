@@ -59,7 +59,7 @@ Cost of this run: 144 Search API requests, 3945 raw file requests (7.6 per repo)
 
 ## Cost per task
 
-The census calls no model and costs nothing to run. The cost line under the results table gives the exact request counts. Collection is the slow part. The collector paces itself to stay inside GitHub's limits and slows to one request a second after any secondary limit, so a pilot of about 1,000 repos takes about two hours without a token.
+The census calls no model and costs nothing to run. The cost line under the results table gives the exact request counts. Collection is the slow part. The collector paces itself to stay inside GitHub's limits and slows to one request a second after any secondary limit, so a pilot of about 1,000 repos took a few hours in the build session.
 
 ## Run it in 10 minutes
 
