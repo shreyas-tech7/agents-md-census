@@ -3,7 +3,7 @@
 Only Shreyas can do these. Do them in order. The release commit is `bc546808a5df57dbf699c5ba4e504da9e7cb2649` on branch `claude/build-agents-md-census`.
 
 1. **Create the GitHub repo and push the work.** The build ran with a local stand-in for GitHub.
-   - Create the private repo `shreyas-tech7/agents-md-census` on https://github.com/new (no README, no license).
+   - Create the repo `shreyas-tech7/agents-md-census` on https://github.com/new (no README, no license).
    - Then run:
      ```bash
      git clone /path/to/agents-md-census.bundle agents-md-census
@@ -26,7 +26,7 @@ Only Shreyas can do these. Do them in order. The release commit is `bc546808a5df
 7. **Do the human checks** listed in the README under "How this was built": read the drift labels in `eval/`, and spot check a few drift verdicts. Then update that README list.
 8. **Run the secret scan once more:** `gitleaks git -v .`
 9. **Decide whether `docs/build/BUILD_PROMPT.md` stays public.** It holds the full build prompt.
-10. **Make the repo public.** All history becomes public at that moment.
+10. **Make the repo public.** Done 2026-11-26: the repo is public.
 11. **Turn on GitHub Pages** (Settings, Pages, branch `main`, folder `/docs`) if you want the report online. It then lives at `docs/report/index.html` on the Pages site.
 12. **Run the full census.** Create a fine-grained token that can only read public repositories, or rely on the Actions `GITHUB_TOKEN`. Never paste a token in chat. Then start the `full-run` workflow from the Actions tab. It collects in chunks, so run it again until its log shows every repo done. It commits the new dataset to the branch it ran on.
 13. **Pin the repo** or list it in your profile README.
