@@ -69,7 +69,7 @@ def _eval_rows(ev: dict | None) -> list[tuple[str, dict]]:
             (f"Drift detector recall, {h['n_snippets']} held-out snippets", h["recall"]),
         ]
     if "label_agreement" in ev:
-        rows.append(("Two blind labelers agree on a snippet", ev["label_agreement"]))
+        rows.append(("Two independent agent labelers agree on a snippet", ev["label_agreement"]))
     return rows
 
 

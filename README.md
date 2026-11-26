@@ -52,10 +52,12 @@ Sample: 1065 public repos collected on 2026-11-20, out of 1065 sampled. Interval
 | Drift detector recall, 30 labeled snippets | 91.7% (64.6 to 98.5) | 11 / 12 | labeled drift |
 | Drift detector precision, 12 held-out snippets | 100.0% (67.6 to 100.0) | 8 / 8 | predicted drift |
 | Drift detector recall, 12 held-out snippets | 72.7% (43.4 to 90.3) | 8 / 11 | labeled drift |
-| Two blind labelers agree on a snippet | 96.7% (83.3 to 99.4) | 29 / 30 | snippets |
+| Two independent agent labelers agree on a snippet | 96.7% (83.3 to 99.4) | 29 / 30 | snippets |
 
 Cost of this run: 144 Search API requests, 7350 raw file requests (6.9 per repo), 0 model calls, $0. These are fixed counts.
 <!-- results:end -->
+
+The drift labels come from two AI agents working apart. A human read of the labels is still on the list below.
 
 ## Cost per task
 
@@ -118,7 +120,7 @@ Human checks, not done yet:
 
 - A human read of the 30 drift labels and the 12 held-out labels.
 - A human spot check of a few drift verdicts against real repos.
-- A human review of the code and the report before the repo goes public.
+- A human review of the code and the report.
 
 This repo follows its own advice. Every command in [AGENTS.md](AGENTS.md) exists, and CI runs `census self-check` to prove it.
 
